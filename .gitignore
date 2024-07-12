@@ -4,18 +4,19 @@ run/
 *.iws
 out/
 *.iml
-.gradle/
+/.gradle
 output/
 bin/
 libs/
+.cs_data
 
 .classpath
 .project
 .idea/
 classes/
 .metadata
-.cs_data
 .vscode
 .settings
+*.launch
 *.launch.DS_Store
 .DS_Store
