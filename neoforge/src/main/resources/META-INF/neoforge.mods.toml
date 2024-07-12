@@ -6,23 +6,33 @@ license = "${mod_license}"
 [[mods]]
 modId = "${mod_id}"
 version = "${mod_version}"
+
 displayName = "${mod_name}"
 authors = "Kubek and Biban_Auriu, Cristelknight999"
-description = '''${mod_description}'''
+displayURL="${homepage}"
 logoFile="pack.png"
+
+description = '''${mod_description}'''
 
 displayTest="IGNORE_ALL_VERSION"
 
-[[dependencies.t_and_t]]
-modId = "neoforge"
-type = "required"
-versionRange = "[21.0,)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.t_and_t]]
-modId = "minecraft"
-type = "required"
-versionRange = "[1.21,)"
-ordering = "NONE"
-side = "BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="[${minecraft_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="cristellib"
+type="required"
+versionRange="[${cristellib_version},)"
+ordering="NONE"
+side="BOTH"
