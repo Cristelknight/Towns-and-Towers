@@ -110,9 +110,9 @@
     }
   ],
   "placement": {
-    "salt": 10587309,
-    "spacing": 48,
-    "separation": 24,
+    "salt": 213742069,
+    "spacing": 51,
+    "separation": 12,
     "type": "minecraft:random_spread",
     "exclusion_zone": {
       "chunk_count": 5,

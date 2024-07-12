@@ -1,0 +1,10 @@
+{
+  "location": "towns_and_towers:resources/wwoo",
+  "display_name": "WWOO LOL",
+  "condition": [
+    {
+      "type": "mod_loaded",
+      "mod": "geckolib"
+    }
+  ]
+}

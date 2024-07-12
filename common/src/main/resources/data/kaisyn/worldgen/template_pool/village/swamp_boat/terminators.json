@@ -8,7 +8,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/swamp_boat/terminators/terminator_01",
-        "processors": "kaisyn:village/street_swamp"
+        "processors": "kaisyn:village/swamp_boat/street_swamp"
       }
     },
     {
@@ -17,7 +17,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/swamp_boat/terminators/terminator_02",
-        "processors": "kaisyn:village/street_swamp"
+        "processors": "kaisyn:village/swamp_boat/street_swamp"
       }
     },
     {
@@ -26,7 +26,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/swamp_boat/terminators/terminator_03",
-        "processors": "kaisyn:village/street_swamp"
+        "processors": "kaisyn:village/swamp_boat/street_swamp"
       }
     }
   ]

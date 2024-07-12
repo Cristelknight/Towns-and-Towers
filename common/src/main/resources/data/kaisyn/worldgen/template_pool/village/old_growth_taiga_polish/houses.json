@@ -8,7 +8,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -17,7 +17,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_2",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -26,7 +26,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_3",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -35,7 +35,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_4",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -44,7 +44,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_5",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -53,7 +53,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_small_house_6",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -62,7 +62,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_medium_house_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -71,7 +71,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_medium_house_2",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -80,7 +80,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_armorer_and_butcher_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -89,7 +89,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_cartographer_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -98,7 +98,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_fisher_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -107,7 +107,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_fletcher_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -116,7 +116,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_leatherworker_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -125,7 +125,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_library_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -134,7 +134,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_mason_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -143,7 +143,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_shepherd_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -161,7 +161,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_temple_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
@@ -170,11 +170,11 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
         "location": "kaisyn:village/old_growth_taiga_polish/houses/old_growth_taiga_toolsmith_and_weaponsmith_1",
-        "processors": "minecraft:empty"
+        "processors": "kaisyn:village/old_growth_taiga_polish/flowers_polish"
       }
     },
     {
-      "weight": 8,
+      "weight": 60,
       "element": {
         "element_type": "minecraft:empty_pool_element",
         "projection": "rigid"

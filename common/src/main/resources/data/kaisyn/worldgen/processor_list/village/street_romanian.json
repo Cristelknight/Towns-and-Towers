@@ -18,6 +18,20 @@
         },
         {
           "location_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:sand"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "minecraft:purple_terracotta",
+            "probability": 0.6
+          },
+          "output_state": {
+            "Name": "minecraft:sand"
+          }
+        },
+        {
+          "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "input_predicate": {

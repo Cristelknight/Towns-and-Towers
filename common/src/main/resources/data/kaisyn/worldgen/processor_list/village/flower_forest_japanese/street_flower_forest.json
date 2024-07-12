@@ -16,6 +16,20 @@
           }
         },
         {
+          "location_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:sand"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "minecraft:cobblestone",
+            "probability": 0.6
+          },
+          "output_state": {
+            "Name": "minecraft:sand"
+          }
+        },
+        {
           "output_state": {
             "Properties": {
               "snowy": "false"

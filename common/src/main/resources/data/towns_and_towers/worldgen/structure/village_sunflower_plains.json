@@ -9,7 +9,7 @@
     "absolute": 0
   },
   "start_pool": "kaisyn:village/sunflower_plains_farm/town_centers",
-  "step": "surface_structures",
+  "step": "fluid_springs",
   "terrain_adaptation": "beard_thin",
   "use_expansion_hack": true
 }

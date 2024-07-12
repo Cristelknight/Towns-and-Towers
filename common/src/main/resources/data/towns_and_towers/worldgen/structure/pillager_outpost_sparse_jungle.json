@@ -21,7 +21,7 @@
     "absolute": 0
   },
   "start_pool": "kaisyn:outpost/camps/sparse_jungle/base_plate",
-  "step": "surface_structures",
+  "step": "fluid_springs",
   "terrain_adaptation": "beard_thin",
   "use_expansion_hack": true
 }

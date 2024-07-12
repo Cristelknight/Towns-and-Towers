@@ -7,8 +7,8 @@
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "rigid",
-        "location": "kaisyn:village/swamp_boat/town_centers/swamp_b_meeting_point_1",
-        "processors": "kaisyn:village/street_swamp"
+        "location": "kaisyn:village/swamp_boat/town_centers/swamp_meeting_point_1",
+        "processors": "kaisyn:village/swamp_boat/street_swamp"
       }
     }
   ]

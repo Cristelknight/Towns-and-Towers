@@ -8,7 +8,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "terrain_matching",
         "location": "kaisyn:village/old_growth_taiga_polish/terminators/terminator_01",
-        "processors": "kaisyn:village/street_polish"
+        "processors": "kaisyn:village/old_growth_taiga_polish/street_polish"
       }
     },
     {
@@ -17,7 +17,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "projection": "terrain_matching",
         "location": "kaisyn:village/old_growth_taiga_polish/terminators/terminator_02",
-        "processors": "kaisyn:village/street_polish"
+        "processors": "kaisyn:village/old_growth_taiga_polish/street_polish"
       }
     }
   ]

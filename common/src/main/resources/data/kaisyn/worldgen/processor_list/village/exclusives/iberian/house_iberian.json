@@ -26,11 +26,7 @@
             "probability": 0.25
           },
           "output_state": {
-            "Name": "minecraft:granite_slab",
-            "Properties": {
-              "type": "double",
-              "waterlogged": "false"
-            }
+            "Name": "minecraft:granite"
           }
         },
         {
@@ -39,7 +35,7 @@
           },
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
-            "block": "minecraft:andesite_slab",
+            "block": "minecraft:andesite",
               "Properties": {
                 "type": "double",
                 "waterlogged": "false"
@@ -56,11 +52,7 @@
           },
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
-            "block": "minecraft:andesite_slab",
-              "Properties": {
-                "type": "double",
-                "waterlogged": "false"
-                },
+            "block": "minecraft:andesite",
             "probability": 0.25
           },
           "output_state": {

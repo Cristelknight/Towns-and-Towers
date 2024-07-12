@@ -119,17 +119,21 @@
     {
       "structure": "towns_and_towers:exclusives/pillager_outpost_rustic",
       "weight": 5
+    },
+    {
+      "structure": "towns_and_towers:exclusives/pillager_outpost_nilotic",
+      "weight": 5
     }
   ],
   "placement": {
-    "salt": 205745294,
+    "salt": 213742069,
     "spacing": 48,
-    "separation": 24,
+    "separation": 12,
     "frequency": 0.2,
     "frequency_reduction_method": "legacy_type_1",
     "type": "minecraft:random_spread",
     "exclusion_zone": {
-      "chunk_count": 5,
+      "chunk_count": 10,
       "other_set": "towns_and_towers:towns"
     }
   }

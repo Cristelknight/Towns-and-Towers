@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "${neo_loader_version_range}"
+#issueTrackerURL = ""
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "Kubek and Biban_Auriu, Cristelknight999"
+description = '''${mod_description}'''
+logoFile="pack.png"
+
+displayTest="IGNORE_ALL_VERSION"
+
+[[dependencies.t_and_t]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.t_and_t]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
