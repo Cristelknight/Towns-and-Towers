@@ -1,0 +1,93 @@
+plugins {
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
+    id "io.github.pacifistmc.forgix" version "1.2.6"
+}
+
+architectury {
+    minecraft = rootProject.minecraft_version
+}
+
+subprojects {
+    apply plugin: "dev.architectury.loom"
+
+    loom {
+        silentMojangMappingsLicense()
+    }
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.officialMojangMappings()
+    }
+}
+
+forgix {
+    group = "cristelknight.tt" // (Required Value)
+    mergedJarName = "t_and_t" // (Required Value)
+    outputDir = "build/libs/merged"
+
+    forge {
+        projectName = "forge"
+    }
+
+    fabric {
+        projectName = "fabric"
+    }
+
+    custom {
+        projectName = "neoforge" // (Required Value)
+    }
+}
+
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
+
+    archivesBaseName = rootProject.archives_base_name
+    version = rootProject.mod_version
+    group = rootProject.maven_group
+
+    repositories {
+    }
+
+
+    tasks.withType(ProcessResources).configureEach {
+        var replaceProperties = [
+                minecraft_version   : minecraft_version,
+                neo_version         : neoforge_version,
+                cristellib_version  : cristellib_version,
+
+                version: mod_version,
+
+
+                neo_loader_version_range: neo_loader_version_range,
+                neo_version_range: neo_version_range,
+
+                forge_loader_version_range: forge_loader_version_range,
+                forge_version_range: forge_version_range,
+
+                fabric_loader_min_version: fabric_loader_min_version,
+
+                mod_id              : archives_base_name, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version, mod_description: mod_description, homepage: homepage
+        ]
+        inputs.properties replaceProperties
+
+        filesMatching(['META-INF/mods.toml']) {
+            expand replaceProperties + [project: project]
+        }
+        filesMatching(['fabric.mod.json']) {
+            expand replaceProperties + [project: project]
+        }
+    }
+
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        options.release = 17
+    }
+
+    java {
+        withSourcesJar()
+    }
+}
