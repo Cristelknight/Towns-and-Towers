@@ -2,6 +2,6 @@
     "pack": {
         "pack_format": 26,
         "description": "Waystone compat pack for T&T",
-        "formats": {"min_inclusive": 26, "max_inclusive": 1000}
+        "supported_formats": {"min_inclusive": 22, "max_inclusive": 1000}
     }
 }

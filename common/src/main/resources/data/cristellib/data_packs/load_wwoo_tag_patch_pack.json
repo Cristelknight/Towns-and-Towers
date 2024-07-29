@@ -1,0 +1,10 @@
+{
+  "location": "towns_and_towers:resources/t_and_t_wwoo_tag_patch",
+  "display_name": "T&T WWOO Tag Patch Pack",
+  "condition": [
+    {
+      "type": "mod_loaded",
+      "mod": "wwoo"
+    }
+  ]
+}
