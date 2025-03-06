@@ -1,7 +1,7 @@
 {
-  "location": "resources/config.json5",
-  "destination": "fwaystones/config.json5",
-  "condition": [
+  "location": "t_and_t:resources/config.json5",
+  "destination": "<CONFIG_DIR>/fwaystones/config.json5",
+  "conditions": [
     {
       "type": "mod_loaded",
       "mod": "fwaystones"
