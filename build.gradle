@@ -1,103 +1,154 @@
 plugins {
-    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
-    id 'architectury-plugin' version '3.4-SNAPSHOT'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id 'java'
+    id 'com.hypherionmc.modutils.modpublisher' version "2.+"
 }
 
-architectury {
-    minecraft = project.minecraft_version
+version = mod_version
+
+// No Java sources — datapack-only mod
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        resources { srcDirs = ['src/main/resources'] }
+    }
+    test { }
 }
 
-allprojects {
-    group = rootProject.maven_group
-    version = rootProject.mod_version
+jar {
+    // Change the filename here — default: "${mod_id}-${mod_version}.jar"
+    archiveFileName = "${mod_id}-fabric-neoforge-${mod_version}.jar"
+
+    // Expand all gradle.properties tokens into metadata files
+    filesMatching(['fabric.mod.json', 'META-INF/neoforge.mods.toml']) {
+        expand project.properties
+    }
+
+    manifest {
+        attributes 'Manifest-Version': '1.0'
+    }
 }
 
-subprojects {
-    apply plugin: 'dev.architectury.loom'
-    apply plugin: 'architectury-plugin'
-    apply plugin: 'maven-publish'
+// No compilation or tests needed
+compileJava.enabled          = false
+processTestResources.enabled = false
+testClasses.enabled          = false
 
-    base {
-        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
-        archivesName = "$rootProject.archives_name-$project.name"
+publisher {
+    // Setup the required API keys. You only need to define the keys for
+    // the platforms you plan on uploading to
+    apiKeys {
+        modrinth (providers.gradleProperty("modrinthToken").orElse(System.getenv("MODRINTH_TOKEN")).get())
+        curseforge (providers.gradleProperty("curseToken").orElse(System.getenv("CURSE_TOKEN")).get())
     }
 
-    repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+    // Enable Debug mode. When enabled, no files will actually be uploaded
+    setDebug(true)
+
+    // Curseforge Project ID
+    setCurseID("626761")
+
+    // Modrinth Project ID
+    setModrinthID("DjLobEOy")
+
+    // Type of release. beta, alpha or release
+    // You can also use VersionType.BETA, VersionType.ALPHA or VersionType.RELEASE
+    setVersionType("release")
+
+    // Required for Modrinth/GitHub
+    setProjectVersion("${project.version}")
+
+    // Fancy display name for the upload.
+    // Will default to the project version if not set
+    setDisplayName("(${project.minecraft_version}) Towns and Towers ${project.version} (NeoForge/Fabric/Quilt)")
+
+    // The supported game versions
+    setGameVersions("${project.minecraft_version}")
+
+    // The modloaders your upload supports.
+    // This can also be an Enum from ModLoader,
+    // like setLoaders(ModLoader.FABRIC, ModLoader.FORGE)
+    setLoaders("fabric", "quilt", "neoforge")
+
+    // The new Curseforge Environment tag. Optional
+    // Valid values are "server", "client" or "both"
+    // You can also use CurseEnvironment.BOTH, or CurseEnvironment.SERVER or CurseEnvironment.CLIENT
+    setCurseEnvironment("both")
+
+    // Upload the release, but keep it "private" until you are ready
+    // Unreleased feature on CurseForge, working on Modrinth
+    setIsManualRelease(false)
+
+    // The file to be uploaded. This can be a file, task, or string.
+    // setArtifact("build/libs/mymod.jar")
+    // setArtifact(jar.getArchiveFile().get())
+    // If this is a task, the task specified will be executed before publishing
+    setArtifact(tasks.jar)
+
+    // Disable the built in Fractureizer scanner
+    setDisableMalwareScanner(true)
+
+    curseDepends {
+        required "cristel-lib"
+    }
+    modrinthDepends {
+        required "cristel-lib"
     }
 
-    loom {
-        silentMojangMappingsLicense()
-    }
+    // Add supported java versions. Currently only used by CurseForge
+    // Supports anything that can be parsed using JavaVersion.toVersion()
+    setJavaVersions([("VERSION_" + java_version)])
+}
 
-    dependencies {
-        minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-        mappings loom.officialMojangMappings()
-    }
+def changelogSource = rootProject.file("CHANGELOG.md")
+def changelogOutput = layout.buildDirectory.file("changelog.md")
 
-    java {
-        // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-        // if it is present.
-        // If you remove this line, sources will not be generated.
-        withSourcesJar()
-
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    tasks.withType(ProcessResources).configureEach {
-        var replaceProperties = [
-                minecraft_version   : minecraft_version,
-                neo_version         : neoforge_version,
-                cristellib_version  : cristellib_version,
-
-                version: mod_version,
-
-
-                neo_loader_version_range: neo_loader_version_range,
-                neo_version_range: neo_version_range,
-
-                //forge_loader_version_range: forge_loader_version_range,
-                //forge_version_range: forge_version_range,
-
-                fabric_loader_min_version: fabric_loader_min_version,
-
-                mod_id              : archives_name, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version, mod_description: mod_description, homepage: homepage
-        ]
-        inputs.properties replaceProperties
-
-        filesMatching(['META-INF/neoforge.mods.toml']) {
-            expand replaceProperties + [project: project]
+tasks.register("generateChangelog") {
+    inputs.file(changelogSource)
+    inputs.property('version', project.version)
+    outputs.file(changelogOutput)
+    doLast {
+        if (!changelogSource.exists()) {
+            throw new GradleException("Missing CHANGELOG.md at ${changelogSource}")
         }
-        filesMatching(['fabric.mod.json']) {
-            expand replaceProperties + [project: project]
+
+        def lines = changelogSource.readLines("UTF-8")
+        def versionHeader = "## [${project.version}]"
+        def versionHeaderAlt = "## ${project.version}"
+        int start = -1
+        for (int i = 0; i < lines.size(); i++) {
+            if (lines[i].startsWith(versionHeader) || lines[i].startsWith(versionHeaderAlt)) {
+                start = i
+                break
+            }
         }
-    }
+        if (start == -1) {
+            def outFile = changelogOutput.get().asFile
+            outFile.parentFile.mkdirs()
+            outFile.text = ""
+            return
+        }
 
-    tasks.withType(JavaCompile).configureEach {
-        it.options.release = 21
-    }
-
-    // Configure Maven publishing.
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                artifactId = base.archivesName.get()
-                from components.java
+        int end = lines.size()
+        for (int i = start + 1; i < lines.size(); i++) {
+            if (lines[i].startsWith("## ")) {
+                end = i
+                break
             }
         }
 
-        // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-        repositories {
-            // Add repositories to publish to here.
-            // Notice: This block does NOT have the same function as the block in the top level.
-            // The repositories here will be used for publishing your artifact, not for
-            // retrieving dependencies.
-        }
+        def section = lines.subList(start + 1, end).join(System.lineSeparator()).trim()
+        def outFile = changelogOutput.get().getAsFile()
+        outFile.parentFile.mkdirs()
+        outFile.text = section + System.lineSeparator()
+    }
+}
+
+tasks.matching { it.name in ["publishMod", "publishModrinth", "publishCurseforge", "publishGitHub"] }.configureEach {
+    dependsOn("generateChangelog")
+}
+
+plugins.withId("com.hypherionmc.modutils.modpublisher") {
+    publisher {
+        setChangelog(changelogOutput.get().getAsFile())
     }
 }

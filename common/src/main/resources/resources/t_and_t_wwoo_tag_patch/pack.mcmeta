@@ -1,7 +1,0 @@
-{
-    "pack": {
-        "pack_format": 26,
-        "supported_formats":{"min_inclusive": 22, "max_inclusive": 1000},
-        "description": "Dedicated WWOO compat patch for T&T"
-    }
-}

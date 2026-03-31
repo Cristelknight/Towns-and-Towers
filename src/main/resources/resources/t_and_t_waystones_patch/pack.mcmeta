@@ -1,0 +1,8 @@
+{
+    "pack": {
+        "pack_format": 88,
+        "description": "Waystone compat pack for T&T",
+		"min_format": 88,
+		"max_format": 1000
+    }
+}
