@@ -23,6 +23,10 @@ jar {
         expand project.properties
     }
 
+    from(rootProject.file('LICENSE')) {
+        rename { "${it}_${mod_name}" }
+    }
+
     manifest {
         attributes 'Manifest-Version': '1.0'
     }
@@ -32,6 +36,46 @@ jar {
 compileJava.enabled          = false
 processTestResources.enabled = false
 testClasses.enabled          = false
+
+processResources {
+    var expandProps = [
+            'minecraft_version'             : minecraft_version,
+            'java_version'                  : java_version,
+
+            'mod_id'                        : mod_id,
+            'mod_version'                   : mod_version,
+
+            'fabric_loader_min_version'     : fabric_loader_min_version,
+
+            'neoforge_min_version'          : neoforge_min_version,
+            'neoforge_loader_version_range' : neoforge_loader_version_range,
+
+            'cristellib_version'            : cristellib_version,
+
+            'mod_name'                      : mod_name,
+            'license'                       : license,
+            'mod_author1'                   : mod_author1,
+            'mod_author2'                   : mod_author2,
+            'mod_author3'                   : mod_author3,
+            'description'                   : project.description,
+            'homepage'                      : homepage,
+            'discord'                       : discord
+    ]
+
+    var jsonExpandProps = expandProps.collectEntries {
+        key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
+    }
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand expandProps
+    }
+
+    filesMatching(['fabric.mod.json']) {
+        expand jsonExpandProps
+    }
+
+    inputs.properties(expandProps)
+}
 
 publisher {
     // Setup the required API keys. You only need to define the keys for
