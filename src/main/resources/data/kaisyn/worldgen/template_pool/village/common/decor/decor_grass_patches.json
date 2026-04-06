@@ -7,7 +7,7 @@
       "element": {
           "projection": "rigid",
           "element_type": "minecraft:feature_pool_element",
-          "feature": "minecraft:patch_grass_normal"
+          "feature": "kaisyn:patch_grass"
       }
   },
   {
@@ -15,7 +15,7 @@
     "element": {
         "projection": "rigid",
         "element_type": "minecraft:feature_pool_element",
-        "feature": "minecraft:patch_tall_grass_2"
+        "feature": "kaisyn:patch_tall_grass"
     }
 }
   ]
