@@ -18,13 +18,11 @@ jar {
     // Change the filename here — default: "${mod_id}-${mod_version}.jar"
     archiveFileName = "${mod_id}-fabric-neoforge-${mod_version}.jar"
 
-    // Expand all gradle.properties tokens into metadata files
-    filesMatching(['fabric.mod.json', 'META-INF/neoforge.mods.toml']) {
-        expand project.properties
-    }
-
     from(rootProject.file('LICENSE')) {
-        rename { "${it}_${mod_name}" }
+        rename { "${it}_${mod_name.replace(" ", "_")}" }
+    }
+    from(rootProject.file('CHANGELOG.md')) {
+        rename { "${it}".replace(".md", ".txt") }
     }
 
     manifest {
@@ -100,12 +98,36 @@ publisher {
     // Required for Modrinth/GitHub
     setProjectVersion("${project.version}")
 
+
+    List<String> versions = minecraft_versions.tokenize(",").collect{ it.trim()}
+
     // Fancy display name for the upload.
     // Will default to the project version if not set
-    setDisplayName("(${project.minecraft_version}) Towns and Towers ${project.version} (NeoForge/Fabric/Quilt)")
+    def formatMcVersions = { List<String> vs, String overrideValue ->
+        if (overrideValue?.trim()) {
+            return "(${overrideValue.trim()})"
+        }
+
+        // Key = major line, e.g. 1.21 from 1.21.1
+        def grouped = vs.groupBy { v ->
+            def p = v.tokenize('.')
+            p.size() >= 2 ? "${p[0]}.${p[1]}" : p[0]
+        }
+
+        def parts = grouped.collect { key, group ->
+            // If more than one version in same major line -> show .x
+            // else show the exact version
+            group.size() > 1 ? "${key}.x" : group[0]
+        }
+
+        "(${parts.join('/')})"
+    }
+    def mcVersions = formatMcVersions(versions, v_name_override)
+
+    setDisplayName("${mcVersions} Towns and Towers ${project.version} (NeoForge/Fabric/Quilt)")
 
     // The supported game versions
-    setGameVersions("${project.minecraft_version}")
+    setGameVersions(versions.toArray() as String[])
 
     // The modloaders your upload supports.
     // This can also be an Enum from ModLoader,
