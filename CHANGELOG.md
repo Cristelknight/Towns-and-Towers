@@ -6,6 +6,9 @@
 - update to 26.1
 - change some loot table behavior (credits: @MrDataPackerModding)
 
+## 1.13.9
+- update to Cristel Lib 3.1.x
+
 ## 1.12.1 - Bits and Details Update
 - waxed all signs (the women and children too)
 - you can now find suspicious gravel in forest ruins
