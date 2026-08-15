@@ -1,10 +1,5 @@
-## 1.13.11
-- fix crash with structure: towns_and_towers:village_snowy_taiga (thx to: @ghostbagans)
-- removed loader and loader version from neoforge.mods.toml
-
 ## 1.13.10
-- update to 26.1
-- change some loot table behavior (credits: @MrDataPackerModding)
+- fix spelling error in structure file, which caused a crash
 
 ## 1.13.9
 - update to Cristel Lib 3.1.x
