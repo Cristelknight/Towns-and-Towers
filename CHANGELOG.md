@@ -1,3 +1,6 @@
+## 1.13.11
+- fix neoforge crash, because of missing mod loader
+
 ## 1.13.10
 - fix spelling error in structure file, which caused a crash
 
