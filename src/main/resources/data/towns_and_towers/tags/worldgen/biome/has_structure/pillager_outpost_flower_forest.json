@@ -61,6 +61,10 @@
         {
             "id": "regions_unexplored:cherry_hills",
             "required": false
+        },
+        {
+            "id": "regions_unexplored:poppy_fields",
+            "required": false
         }
     ]
 }
