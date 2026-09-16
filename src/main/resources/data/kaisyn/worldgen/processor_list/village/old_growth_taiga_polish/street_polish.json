@@ -13,7 +13,7 @@
             "block": "minecraft:gravel"
           },
           "output_state": {
-            "Name": "minecraft:spruce_planks"
+            "id": "minecraft:spruce_planks"
           }
         },
         {
@@ -27,7 +27,7 @@
             "probability": 0.6
           },
           "output_state": {
-            "Name": "minecraft:sand"
+            "id": "minecraft:sand"
           }
         },
         {
@@ -40,7 +40,7 @@
             "probability": 0.2
           },
           "output_state": {
-            "Name": "minecraft:stone_bricks"
+            "id": "minecraft:stone_bricks"
           }
         },
         {
@@ -53,7 +53,7 @@
             "probability": 0.2
           },
           "output_state": {
-            "Name": "minecraft:cracked_stone_bricks"
+            "id": "minecraft:cracked_stone_bricks"
           }
         },
         {
@@ -66,7 +66,7 @@
             "probability": 0.2
           },
           "output_state": {
-            "Name": "minecraft:polished_andesite"
+            "id": "minecraft:polished_andesite"
           }
         },
         {
@@ -79,7 +79,7 @@
             "probability": 0.1
           },
           "output_state": {
-            "Name": "minecraft:grass_block"
+            "id": "minecraft:grass_block"
           }
         }
       ]

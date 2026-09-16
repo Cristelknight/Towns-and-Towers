@@ -4,7 +4,7 @@
       "rules": [
         {
           "output_state": {
-            "Name": "minecraft:dandelion"
+            "id": "minecraft:dandelion"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -17,7 +17,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:allium"
+            "id": "minecraft:allium"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -30,7 +30,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:azure_bluet"
+            "id": "minecraft:azure_bluet"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -43,7 +43,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:orange_tulip"
+            "id": "minecraft:orange_tulip"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -56,7 +56,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:white_tulip"
+            "id": "minecraft:white_tulip"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -69,7 +69,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:pink_tulip"
+            "id": "minecraft:pink_tulip"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -82,7 +82,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:oxeye_daisy"
+            "id": "minecraft:oxeye_daisy"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -95,7 +95,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:cornflower"
+            "id": "minecraft:cornflower"
           },
           "input_predicate": {
             "block": "minecraft:poppy",
@@ -108,7 +108,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:lily_of_the_valley"
+            "id": "minecraft:lily_of_the_valley"
           },
           "input_predicate": {
             "block": "minecraft:poppy",

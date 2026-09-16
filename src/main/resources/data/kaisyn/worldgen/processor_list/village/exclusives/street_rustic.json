@@ -13,7 +13,7 @@
             "block": "minecraft:terracotta"
           },
           "output_state": {
-            "Name": "minecraft:spruce_planks"
+            "id": "minecraft:spruce_planks"
           }
         },
         {
@@ -27,7 +27,7 @@
             "probability": 0.6
           },
           "output_state": {
-            "Name": "minecraft:sand"
+            "id": "minecraft:sand"
           }
         },
         {
@@ -40,7 +40,7 @@
             "block": "minecraft:orange_terracotta"
           },
           "output_state": {
-            "Name": "minecraft:spruce_planks"
+            "id": "minecraft:spruce_planks"
           }
         },
         {
@@ -53,7 +53,7 @@
             "probability": 0.1
           },
           "output_state": {
-            "Name": "minecraft:rooted_dirt"
+            "id": "minecraft:rooted_dirt"
           }
         },
         {
@@ -66,7 +66,7 @@
             "probability": 0.1
           },
           "output_state": {
-            "Name": "minecraft:coarse_dirt"
+            "id": "minecraft:coarse_dirt"
           }
         },
         {
@@ -79,7 +79,7 @@
             "probability": 0.4
           },
           "output_state": {
-            "Name": "minecraft:coarse_dirt"
+            "id": "minecraft:coarse_dirt"
           }
         },
         {
@@ -92,7 +92,7 @@
             "probability": 0.4
           },
           "output_state": {
-            "Name": "minecraft:rooted_dirt"
+            "id": "minecraft:rooted_dirt"
           }
         },
         {
@@ -104,7 +104,7 @@
             "block": "minecraft:terracotta"
           },
           "output_state": {
-            "Name": "minecraft:dirt_path"
+            "id": "minecraft:dirt_path"
           }
         },
         {
@@ -116,7 +116,7 @@
             "block": "minecraft:orange_terracotta"
           },
           "output_state": {
-            "Name": "minecraft:grass_block"
+            "id": "minecraft:grass_block"
           }
         }
       ]

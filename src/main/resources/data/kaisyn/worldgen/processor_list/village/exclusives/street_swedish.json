@@ -13,7 +13,7 @@
             "block": "minecraft:stone"
           },
           "output_state": {
-            "Name": "minecraft:dark_oak_planks"
+            "id": "minecraft:dark_oak_planks"
           }
         },
         {
@@ -27,7 +27,7 @@
             "probability": 0.6
           },
           "output_state": {
-            "Name": "minecraft:sand"
+            "id": "minecraft:sand"
           }
         },
         {
@@ -40,7 +40,7 @@
             "probability": 0.2
           },
           "output_state": {
-            "Name": "minecraft:grass_block",
+            "id": "minecraft:grass_block",
             "Properties": {"Snowy": "false"}
           }
         }

@@ -13,7 +13,7 @@
             "block": "minecraft:grass_block"
           },
           "output_state": {
-            "Name": "minecraft:water",
+            "id": "minecraft:water",
             "Properties": {
               "level": "0"
             }
@@ -29,7 +29,7 @@
             "block": "minecraft:grass_block"
           },
           "output_state": {
-            "Name": "minecraft:sand",
+            "id": "minecraft:sand",
             "Properties": {
               "level": "0"
             }
@@ -45,7 +45,7 @@
             "block": "minecraft:grass_block"
           },
           "output_state": {
-            "Name": "minecraft:gravel",
+            "id": "minecraft:gravel",
             "Properties": {
               "level": "0"
             }
@@ -62,7 +62,7 @@
             "probability": 0.5
           },
           "output_state": {
-            "Name": "minecraft:air"
+            "id": "minecraft:air"
           }
         },
         {
@@ -75,7 +75,7 @@
             "probability": 0.01
           },
           "output_state": {
-            "Name": "minecraft:suspicious_gravel",
+            "id": "minecraft:suspicious_gravel",
             "Properties": {
               "dusted": "0"
             }
@@ -95,7 +95,7 @@
             "probability": 0.005
           },
           "output_state": {
-            "Name": "minecraft:suspicious_gravel",
+            "id": "minecraft:suspicious_gravel",
             "Properties": {
               "dusted": "0"
             }
@@ -115,7 +115,7 @@
             "probability": 0.2
           },
           "output_state": {
-            "Name": "minecraft:gravel"
+            "id": "minecraft:gravel"
           }
         },
         {
@@ -128,7 +128,7 @@
             "probability": 0.4
           },
           "output_state": {
-            "Name": "minecraft:mossy_cobblestone"
+            "id": "minecraft:mossy_cobblestone"
           }
         },
         {
@@ -141,7 +141,7 @@
             "block": "minecraft:grass_block"
           },
           "output_state": {
-            "Name": "minecraft:sand"
+            "id": "minecraft:sand"
           }
         }
       ]

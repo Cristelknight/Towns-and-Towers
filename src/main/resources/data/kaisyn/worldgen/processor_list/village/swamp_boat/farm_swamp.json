@@ -13,7 +13,7 @@
             "probability": 0.6
           },
           "output_state": {
-            "Name": "minecraft:beetroots",
+            "id": "minecraft:beetroots",
             "Properties": {
               "age": "0"
             }
@@ -29,7 +29,7 @@
             "probability": 0.1
           },
           "output_state": {
-            "Name": "minecraft:melon_stem",
+            "id": "minecraft:melon_stem",
             "Properties": {
               "age": "0"
             }

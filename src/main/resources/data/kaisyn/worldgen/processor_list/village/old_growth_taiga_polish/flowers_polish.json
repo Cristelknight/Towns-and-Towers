@@ -13,7 +13,7 @@
             "probability": 0.25
           },
           "output_state": {
-            "Name": "minecraft:red_tulip"
+            "id": "minecraft:red_tulip"
           }
         },
         {
@@ -26,7 +26,7 @@
             "probability": 0.25
           },
           "output_state": {
-            "Name": "minecraft:poppy"
+            "id": "minecraft:poppy"
           }
         },
         {
@@ -39,7 +39,7 @@
             "probability": 0.25
           },
           "output_state": {
-            "Name": "minecraft:fern"
+            "id": "minecraft:fern"
           }
         }
       ]

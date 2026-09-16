@@ -4,7 +4,7 @@
       "rules": [
         {
           "output_state": {
-            "Name": "minecraft:spruce_planks"
+            "id": "minecraft:spruce_planks"
           },
           "input_predicate": {
             "block": "minecraft:cobblestone",
@@ -26,7 +26,7 @@
             "probability": 0.6
           },
           "output_state": {
-            "Name": "minecraft:sand"
+            "id": "minecraft:sand"
           }
         },
         {
@@ -34,7 +34,7 @@
             "Properties": {
               "snowy": "false"
             },
-            "Name": "minecraft:grass_block"
+            "id": "minecraft:grass_block"
           },
           "input_predicate": {
             "block": "minecraft:cobblestone",
@@ -47,7 +47,7 @@
         },
 		{
           "output_state": {
-            "Name": "minecraft:gravel"
+            "id": "minecraft:gravel"
           },
           "input_predicate": {
             "block": "minecraft:cobblestone",
@@ -63,7 +63,7 @@
             "Properties": {
               "level": "0"
             },
-            "Name": "minecraft:water"
+            "id": "minecraft:water"
           },
           "input_predicate": {
             "block": "minecraft:grass_block",
@@ -79,7 +79,7 @@
             "Properties": {
               "level": "0"
             },
-            "Name": "minecraft:water"
+            "id": "minecraft:water"
           },
           "input_predicate": {
             "block": "minecraft:dirt",
