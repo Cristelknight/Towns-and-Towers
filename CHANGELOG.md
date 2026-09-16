@@ -1,3 +1,7 @@
+## 1.13.12
+- updated to 26.3
+- added regions_unexplored:poppy_fields to flower forest outpost tag (if RU ever gets updated to 26.3)
+
 ## 1.13.11
 - fix crash with structure: towns_and_towers:village_snowy_taiga (thx to: @ghostbagans)
 - removed loader and loader version from neoforge.mods.toml
