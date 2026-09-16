@@ -158,17 +158,14 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_chain",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 2,
-                "max": 10
-              },
-              "add": false
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 10
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
