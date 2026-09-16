@@ -41,7 +41,7 @@
           },
           "output_state": {
             "id": "minecraft:rooted_dirt",
-            "Properties": {
+            "properties": {
               "snowy": "false"
             }
           }
@@ -83,7 +83,7 @@
           },
           "output_state": {
             "id": "minecraft:grass_block",
-            "Properties": {
+            "properties": {
               "snowy": "false"
             }
           }

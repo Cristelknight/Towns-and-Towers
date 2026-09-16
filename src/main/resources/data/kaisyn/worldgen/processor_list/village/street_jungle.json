@@ -31,7 +31,7 @@
         },
         {
           "output_state": {
-            "Properties": {
+            "properties": {
               "snowy": "false"
             },
             "id": "minecraft:grass_block"
@@ -47,7 +47,7 @@
         },
         {
           "output_state": {
-            "Properties": {
+            "properties": {
               "level": "0"
             },
             "id": "minecraft:water"
@@ -63,7 +63,7 @@
         },
         {
           "output_state": {
-            "Properties": {
+            "properties": {
               "level": "0"
             },
             "id": "minecraft:water"
@@ -79,7 +79,7 @@
         },
         {
           "output_state": {
-            "Properties": {
+            "properties": {
               "snowy": "false"
             },
             "id": "minecraft:grass_block"

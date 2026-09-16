@@ -36,7 +36,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:andesite",
-              "Properties": {
+              "properties": {
                 "type": "double",
                 "waterlogged": "false"
                 },

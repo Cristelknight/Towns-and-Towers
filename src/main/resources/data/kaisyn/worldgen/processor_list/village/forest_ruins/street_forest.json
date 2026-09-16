@@ -14,7 +14,7 @@
           },
           "output_state": {
             "id": "minecraft:water",
-            "Properties": {
+            "properties": {
               "level": "0"
             }
           }
@@ -30,7 +30,7 @@
           },
           "output_state": {
             "id": "minecraft:sand",
-            "Properties": {
+            "properties": {
               "level": "0"
             }
           }
@@ -46,7 +46,7 @@
           },
           "output_state": {
             "id": "minecraft:gravel",
-            "Properties": {
+            "properties": {
               "level": "0"
             }
           }
@@ -76,7 +76,7 @@
           },
           "output_state": {
             "id": "minecraft:suspicious_gravel",
-            "Properties": {
+            "properties": {
               "dusted": "0"
             }
           },
@@ -96,7 +96,7 @@
           },
           "output_state": {
             "id": "minecraft:suspicious_gravel",
-            "Properties": {
+            "properties": {
               "dusted": "0"
             }
           },

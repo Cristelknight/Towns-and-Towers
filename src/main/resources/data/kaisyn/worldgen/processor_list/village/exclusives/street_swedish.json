@@ -41,7 +41,7 @@
           },
           "output_state": {
             "id": "minecraft:grass_block",
-            "Properties": {"Snowy": "false"}
+            "properties": {"Snowy": "false"}
           }
         }
       ]
